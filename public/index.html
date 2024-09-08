@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!---------------head tag------------->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>QR-generator</title> 
+        <!-----------stylesheet link-------------->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-------google font links---------------->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+    <!---------------body tag-------------->
+    <body>
+        <!--------------header section containg the logo of the company------>
+        <section class="header" id="header">
+        <!---------------logos-package----------------------->    
+         <div class="pack-logos">  
+         <img class="logo" src="./images/logo.png" alt="logo">
+         </div>
+         <!----------------buy me a coffee--------------------->
+         <div class="pack-coffee " id="pack-coffee">
+         <p><a href="https://www.buymeacoffee.com/adhithya"> <img class="coffee" src="images/buycoffee.png"  alt="https://buymeacoffee.com/adhithya" /></a></p>
+         </div> 
+        </section>
+        <!--------------------hero section containg the main content of the page -->
+        <section class="hero" id="hero">
+        <div class="hero-txt-cover">    
+        <p class="hero-txt">Create your own unique QR code for free online</p>
+        </div>
+        <div class="hero-sub-txt">
+        <p>Make your custom QR codes by adding your own URLs to the QR.IO free online QR code generator. It’s a faster and easier way for clients to visit your website, social media accounts, and other online resources. Plus, having QR codes on all your collateral will help boost customer engagement and experience. Just enter a URL and you’ll get your QR code in a few taps!</p>
+        </div>
+        <!---------------------create button------------------------>
+        <div class="create-form">
+            <form action="/create" method="post">
+                <input class="create-btn" type="submit" value="create" >
+            </form>
+        </div>
+       
+        </section>
+        <!-------------section for the circle to follow the cursor----->
+        <section >
+            <div class="circle" id="circle">
+            </div>
+        </section>
+      
+    <script src="./script.js" charset="utf-8"></script>
+    </body>
+   
+</html>

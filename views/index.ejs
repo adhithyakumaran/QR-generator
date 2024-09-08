@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>QR-generator</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body id="body">
+        <% if (locals.error){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= locals.error%>
+            </div>
+        <%}%>    
+        <!--------------------------------------ejs hero section------------------------->
+        <section class="ej-hero-section" id="ejs-hero-section">
+        <form action="/generate" method="post">
+        <!-----------------------header section containinng the url-------------->   
+         <div class="header-1-ejs-div"><label class="header-1-ejs"> QR Generator</label></div> 
+            <div class="header-sec-ejs">
+               
+                <label class="header-2-ejs" for="url">URL</label>
+                <input class="header-3-ejs" type="text" name="text" required placeholder="Enter the url link">
+            </div>
+        <!-----------------------cutomizer section containing the color  --> 
+               
+            <div class="customizer-color-ejs">
+                <label class="customizer-color-1" for="color-ejs">color</label>
+                <input class="customizer-color-2" type="color" value="#FDD017" name="color">
+            </div> 
+        <!-----------------------cutomizer section containing the size  -->   
+            <div class="customizer-size-ejs">
+               <label class="customizer-sixe-1" for="size">size</label>
+               <input type="number" class="customizer-sixe-2" name="size" placeholder="Enter the size" value="200">
+            </div>
+           <div class="submit-btn-ejs"> <button type="submit"  >Generate</button> </div>
+        </form>
+        </section>
+      
+        <% if (locals.qrCode){ %>
+            <div class="mt-4">
+               <img src=" <%= locals.qrCode%>" class="img-fluid" />
+            </div>
+        <%}%>   
+        <!---------------------------------download link---------------------------------> 
+        <a href=" <%= locals.qrCode%>" download="QRcode">
+            <button type="button" class="dnld-btn">Download</button>
+        </a>
+   
+    </body>
+</html>
